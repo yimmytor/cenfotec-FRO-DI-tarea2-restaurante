@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Pacifico&family=Roboto:wght@100;300;500&display=swap');
+
+:root {
+    /* Colores */
+    --color-uno: #000000;
+    --color-dos: #ffb600;
+    --color-tres: #444444;
+    --color-cuatro: #ffffff;
+    --color-cinco: #33a80f;
+
+    --color-panel-oscuro: #00000060;
+    --color-header-solid: #000000c4;
+    --color-letra: #222222;
+    --color-letra-resalte: #ffffff;    
+    --color-sombra-uno: #00000085;
+    --color-sombra-dos: #0000001e;
+
+    /* Fuentes */
+    --fuente-roboto: 'Roboto', sans-serif;
+    --fuente-open-sans: 'Open Sans', sans-serif;
+    --fuente-pacifico: 'Pacifico', cursive;
+    --stroke-liviano: 100;
+    --stroke-regular: 400;
+    --stroke-fuerte: 600;
+
+    /* Medidas */
+    --pading-lateral: 0.938rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;    
+}
+
+body {    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;    
+    background-color: var(--color-uno);    
+    font-family: var(--fuente-open-sans);
+    font-weight: var(--stroke-liviano);
+    color: var(--color-letra-resalte);
+}
+
+.borde-redondo {
+    border-radius: 2.5px;
+    -webkit-border-radius: 2.5px;
+    -moz-border-radius: 2.5px;
+    -ms-border-radius: 2.5px;
+    -o-border-radius: 2.5px;
+}
+
+.boton-seccion {
+    height: 1.875rem;
+    border: none;
+    background-color: var(--color-dos);    
+    font-size: 0.85rem;
+    font-family: var(--fuente-roboto);
+    font-weight: var(--stroke-fuerte);    
+}
+
+.header-semisolid {
+    background-color: var(--color-header-solid);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-letra);
+}
+
+header {    
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 2.5rem;
+    padding: 1.5rem var(--pading-lateral);
+    position: fixed;
+    transition: all 0.3s;
+}
+
+header img.logo {
+    height: 1.5rem;
+}
+
+header #menu-bar {
+    display: none;
+}
+
+header #menu-bar:checked~nav{
+    left: 0;
+}
+
+header .icono-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 1.875rem;
+    margin: 0;    
+}
+
+header .icono-menu-close {
+    height: 1.5rem;    
+}
+
+header nav {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    left: -55vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50vw;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    background-color: var(--color-dos);
+    box-shadow: 5px 0 5px var(--color-sombra-uno);
+    transition: all 0.3s;
+    color: var(--color-letra);
+}
+
+header nav ul {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+header nav li {
+    width: 100%;    
+    list-style: none;
+    margin-bottom: 0.938rem;
+}
+
+header nav li:last-child {
+    margin-bottom: 0;
+}
+
+header nav li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0.313 rem;    
+    font-family: var(--fuente-roboto);
+    font-weight: var(--stroke-regular);
+}
+
+main {
+    min-height: 100vh;
+}
+
+main section.principal {
+    height: 50vh;    
+    background: url('/assets/img/background.jpg');
+    background-size: cover;
+    background-position-x: right;
+    background-position-y: top;
+    background-repeat: no-repeat;    
+}
+
+main section.principal .panel-oscuro {
+    background-color: var(--color-panel-oscuro);    
+}
+
+main section.principal .body {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    height: 100%;
+    width: 100%;    
+}
+
+main section.principal h1 {
+    font-weight: var(--stroke-liviano);
+    font-size: 1.8rem;
+    font-family: var(--fuente-pacifico);
+    color: var(--color-dos);
+}
+
+main section.principal p {
+    line-height: 1.25rem;
+    font-size: 1.4rem;
+    font-weight: var(--stroke-fuerte);       
+}
+
+main section.principal a {
+    width: 8.125rem;
+    margin-top: 1.25rem;
+    line-height: 1.875rem;
+    text-align: center;    
+}
+
+main section.seccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.875rem var(--pading-lateral) var(--pading-lateral) var(--pading-lateral);    
+}
+
+main section.seccion h2 {
+    margin-bottom: 0.938rem;
+    font-weight: var(--stroke-regular);
+    font-size: 1.5rem;
+    font-family: var(--fuente-roboto);
+    color: var(--color-dos);
+}
+
+main section.restaurante figure {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+}
+
+main section.restaurante figure img {
+    max-width: 100%;
+}
+
+main section.restaurante figure figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.8rem; 
+    font-style: italic;   
+}
+
+main section.restaurante .info p{
+    margin-top: 0.938rem;
+    width: 100%;
+}
+
+main section.menu {
+    background-color: var(--color-tres);
+}
+
+main section.menu .banner {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 25vh;
+    width: 100%;
+    background: url('/assets/img/banner.jpg');
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;    
+    box-shadow: 0 0 5px var(--color-sombra-uno);
+}
+
+main section.menu .banner .banner-text {           
+    display: inline-block;
+    padding: 0.314rem;
+    margin-top: 0.625rem;     
+    background-color: var(--color-cinco);    
+    font-weight: var(--stroke-regular);
+    font-size: 1.1rem;
+    font-family: var(--fuente-open-sans);
+    font-style: italic;            
+    text-align: center;
+    box-shadow: 0 0 5px var(--color-sombra-uno);
+}
+
+main section.menu .platillos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    color: var(--color-letra);
+}
+
+main section.menu .platillos article.platillo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 20vh;
+    padding: 0.625rem;
+    margin-bottom: 0.625rem;
+    background-color: var(--color-cuatro);
+    box-shadow: 0 0 4px var(--color-sombra-dos);    
+}
+
+main section.menu .platillos article.platillo .info-platillo {
+    width: 100%;
+}
+
+main section.menu .platillos article.platillo img.imagen-platillo {
+    height: 5.625rem;
+    margin-right: 0.625rem;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    box-shadow: 0 0 5px var(--color-sombra-uno);
+}
+
+main section.menu .platillos article.platillo .info-platillo h3 {
+    margin-bottom: 0.313rem;
+    font-size: 1.1rem;
+    font-weight: var(--stroke-fuerte);
+}
+
+main section.menu .platillos article.platillo .info-platillo h3 svg{
+    height: 1rem;    
+}
+
+main section.menu .platillos article.platillo .info-platillo p.descripcion-platillo {
+    font-size: 0.9rem;
+    font-weight: var(--stroke-regular);
+    color: var(--color-letra-secundaria);
+}
+
+main section.menu .platillos article.platillo .info-platillo p.precio-platillo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;        
+    margin-top: 0.625rem;
+    font-size: 0.68rem;    
+    font-weight: var(--stroke-fuerte);
+    color: var(--color-tres);
+}
+
+main section.menu .platillos article.platillo .info-platillo p.precio-platillo a {
+    padding: 0.4rem 0.4rem;
+    width: 4.875rem;
+    background-color: var(--color-dos);
+    text-align: center;   
+}
+
+main section.reservaciones {
+    display: flex;
+    flex-direction: column;
+}
+
+main section.reservaciones form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.938rem;
+}
+
+main section.reservaciones form .form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.625rem;
+}
+
+main section.reservaciones form .form-row label {
+    width: 11rem;
+}
+
+main section.reservaciones form .form-row input {
+    width: 100%;
+    height: 35px;
+}
+
+main section.reservaciones form button[type="submit"] {
+    width: 100%;
+    margin-top: 0.625rem;
+}
+
+main section.contacto {
+    background-color: var(--color-tres);   
+}
+
+main section.contacto a {
+    color: var(--color-letra-resalte);
+}
+
+main section.contacto .mapa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    margin-bottom: 1rem;  
+    width: 100%;  
+}
+
+main section.contacto .mapa iframe {
+    width: 100%;
+}
+
+main section.contacto .informacion-contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+main section.contacto .informacion-contacto .linea-contacto {
+    display: flex;
+    margin-bottom: 0.938rem;
+}
+
+main section.contacto .informacion-contacto .linea-contacto svg {
+    fill: var(--color-dos);
+    margin-right: 0.625rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.125rem;    
+    padding: 0 var(--pading-lateral);
+    background-color: var(--color-uno);     
+}
+
+footer .social svg {
+    height: 1.6rem;
+    width: 1.6rem;
+    fill: var(--color-letra-resalte);
+}
+
+@media (min-width: 400px){
+    html {
+        font-size: 19px;
+    }    
+}
