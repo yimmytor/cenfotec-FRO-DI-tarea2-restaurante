@@ -664,9 +664,13 @@ footer .social svg {
         height: 100vh;
     }    
 
+    header nav li {
+        margin-bottom: 0.313rem;
+    }
+
     main section.contacto .mapa iframe {
         height: 60vh;
-    }
+    }    
 }
 
 @media only screen 
