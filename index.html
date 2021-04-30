@@ -199,7 +199,7 @@
         <section id="reservaciones" class="seccion reservaciones">
             <h2>RESERVACI&Oacute;N DE MESAS</h2>
             <div class="contenedor">
-                <form action="#">
+                <form id="formulario-reserva" action="#">
                     <div class="form-row">
                         <label for="nombre">Nombre: </label>
                         <input type="text" id="nombre" placeholder="Digite su nombre" required>
@@ -218,9 +218,9 @@
                     </div>
                     <div class="form-row">
                         <label for="comensales">Comensales: </label>
-                        <input type="number" id="comensales" required>
+                        <input type="number" id="comensales" required min="1" max="5">
                     </div>
-                    <button class="boton-seccion borde-redondo" type="submit">SOLICITAR RESERVA</button>
+                    <button id="solicitar-reserva" class="boton-seccion borde-redondo" type="submit">SOLICITAR RESERVA</button>
                 </form>
             </div>
         </section>
@@ -299,9 +299,9 @@
             </div>
         </div>
     </footer>
-    <div class="modal oculto">
+    <div id="modal" class="modal oculto">
         <h2>Solicitud Exitosa</h2>
-        <p>Su solicitud de reserva ha sido registrada con los siguientes datos:</p>
+        <p class="modal-descripcion">Su solicitud de reserva ha sido registrada con los siguientes datos:</p>
         <div class="modal-info">
             <p><span>Nombre:</span><span id="modal-nombre"></span></p>
             <p><span>Correo:</span><span id="modal-correo"></span></p>

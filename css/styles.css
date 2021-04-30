@@ -414,7 +414,7 @@ main section.contacto .mapa {
     justify-content: center;
     align-items: center;    
     margin-bottom: 1rem;  
-    width: 100%;  
+    width: 80%;  
 }
 
 main section.contacto .mapa iframe {
@@ -468,14 +468,15 @@ footer .social svg {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 350px;
-    height: 400px;
+    max-width: 300px;
+    width: 300px;
+    height: 346px;
+    padding: 0 0.630rem;
     position: fixed;
     left: 50%;
     top: 50%; 
-    margin-left: -175px;
-    margin-top: -200px;
-    padding: 0.938rem;
+    margin-left: -150px;
+    margin-top: -173px;
     border: 1px solid var(--color-tres);
     background-color: var(--color-cuatro);
     color: var(--color-letra);
@@ -487,19 +488,35 @@ footer .social svg {
     margin-bottom: 0.938rem;
 }
 
+.modal .modal-descripcion {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.modal .modal-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
 .modal .modal-info p {
     display: flex;
-    width: 100;
-    margin: 0;
+    width: 100%;
+    margin: 0;    ;
 }
 
 .modal .modal-info p span:first-child {
-    width: 45%;
+    width: 38%;
     font-weight: var(--stroke-fuerte);
 }
 
 .modal .modal-info p span:last-child {
-    width: 55%;
+    width: 62%;
 }
 
 .modal button {
