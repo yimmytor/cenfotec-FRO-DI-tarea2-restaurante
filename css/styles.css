@@ -6,7 +6,7 @@
     --color-dos: #ffb600;
     --color-tres: #444444;
     --color-cuatro: #ffffff;
-    --color-cinco: #33a80f;
+    --color-cinco: #33a80f;    
 
     --color-panel-oscuro: #00000060;
     --color-header-solid: #000000c4;
@@ -14,6 +14,8 @@
     --color-letra-resalte: #ffffff;    
     --color-sombra-uno: #00000085;
     --color-sombra-dos: #0000001e;
+    --color-fondo-mesaje-error: #ff9a9a;
+    --color-letra-mesaje-error: #aa1616;
 
     /* Fuentes */
     --fuente-roboto: 'Roboto', sans-serif;
@@ -365,6 +367,22 @@ main section.reservaciones {
     flex-direction: column;
 }
 
+main section.reservaciones #contenedor-mensaje-error {
+    width: 100%;    
+}
+
+main section.reservaciones .mensaje-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.8rem;        
+    margin-bottom: 0.938rem;
+    background-color: var(--color-fondo-mesaje-error);
+    font-weight: var(--stroke-fuerte);
+    color: var(--color-letra-mesaje-error);    
+}
+
 main section.reservaciones form {
     width: 100%;
     display: flex;
@@ -470,13 +488,13 @@ footer .social svg {
     align-items: center;
     max-width: 300px;
     width: 300px;
-    height: 346px;
+    height: 400px;
     padding: 0 0.630rem;
     position: fixed;
     left: 50%;
     top: 50%; 
     margin-left: -150px;
-    margin-top: -173px;
+    margin-top: -200px;
     border: 1px solid var(--color-tres);
     background-color: var(--color-cuatro);
     color: var(--color-letra);
@@ -513,6 +531,7 @@ footer .social svg {
 .modal .modal-info p span:first-child {
     width: 38%;
     font-weight: var(--stroke-fuerte);
+    margin-right: 0.313rem;
 }
 
 .modal .modal-info p span:last-child {
@@ -676,7 +695,7 @@ footer .social svg {
     main section.menu .platillos article.platillo {
         width: 49%;        
     }    
-
+    
     main section.reservaciones form {
         width: 80%;        
         margin: auto;        

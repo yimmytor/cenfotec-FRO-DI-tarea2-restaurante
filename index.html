@@ -197,9 +197,10 @@
             </div>
         </section>
         <section id="reservaciones" class="seccion reservaciones">
-            <h2>RESERVACI&Oacute;N DE MESAS</h2>
-            <div class="contenedor">
+            <h2>RESERVACI&Oacute;N DE MESAS</h2>            
+            <div class="contenedor">                
                 <form id="formulario-reserva" action="#">
+                    <div id="contenedor-mensaje-error"></div>
                     <div class="form-row">
                         <label for="nombre">Nombre: </label>
                         <input type="text" id="nombre" placeholder="Digite su nombre" required>
@@ -303,11 +304,11 @@
         <h2>Solicitud Exitosa</h2>
         <p class="modal-descripcion">Su solicitud de reserva ha sido registrada con los siguientes datos:</p>
         <div class="modal-info">
-            <p><span>Nombre:</span><span id="modal-nombre"></span></p>
-            <p><span>Correo:</span><span id="modal-correo"></span></p>
-            <p><span>Tel&eacute;fono:</span><span id="modal-telefono"></span></p>
-            <p><span>Fecha y Hora:</span><span id="modal-fecha-hora"></span></p>
-            <p><span>Comensales:</span><span id="modal-comensales"></span></p>
+            <p><span>Nombre: </span><span id="modal-nombre"></span></p>
+            <p><span>Correo: </span><span id="modal-correo"></span></p>
+            <p><span>Tel&eacute;fono: </span><span id="modal-telefono"></span></p>
+            <p><span>Fecha y Hora: </span><span id="modal-fecha-hora"></span></p>
+            <p><span>Comensales: </span><span id="modal-comensales"></span></p>
         </div>
         <button id="aceptar-modal">Aceptar</button>
     </div>
