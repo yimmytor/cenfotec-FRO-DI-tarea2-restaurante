@@ -1,3 +1,8 @@
-# cenfotec-FRO-DI-tarea2-restaurante
-Esta es una página web para la realización de la Tarea 2 del curso de "Diseño de Interfaz" del Programa "Front-End Web Development" de la Universidad Cenfotec, en donde se utilizan los diferentes tags de HTML, selectores de CSS y algunos conocimientos de JS, además implementa diseño responsivo y accesibilidad.
+# Página Restaurante
+
+Esta es una página web para la realización de la ***Página Restaurante*** del módulo de ***Diseño de Interfaz Web*** del ***Programa de Actualiación Profesiona Front-End Web Development*** de la ***Universidad Cenfotec***.
+
+## Live Demo
+[Página Restaurante](https://restaurante-cenfotec.web.app/)
+
 
